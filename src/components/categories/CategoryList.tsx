@@ -6,7 +6,7 @@ interface CategoryListProps {
 }
 
 export function CategoryList({ categories }: CategoryListProps) {
-  if (categories.length === 0) {
+  if (categories?.length < 1) {
     return <p className="text-center text-gray-500">No hay categorías para mostrar.</p>;
   }
 

@@ -17,13 +17,20 @@ export function Navbar() {
       </Link>
 
       <div className="flex items-center gap-4">
+        {isAuthenticated && (
+          <Link to="/favorites" className="hover:underline">
+            Mis eventos favoritos
+          </Link>
+        )}
+        
         <Link to="/" className="hover:underline">
           Eventos
         </Link>
 
+
         {isAuthenticated && (
-          <Link to="/favorites" className="hover:underline">
-            Mis favoritos
+          <Link to="/categories" className="hover:underline">
+            Categorías
           </Link>
         )}
 
